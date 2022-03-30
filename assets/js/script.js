@@ -3,11 +3,17 @@ let mobile = 'ontouchstart' in document.documentElement;
 let switchAllowed = false;
 
 function openSocial(type) {
-  let url = 'https://www.w3schools.com/';
+  let url = 'about:blank';
 
   switch (type) {
-    case 'w3s':
-      url = 'https://www.w3schools.com/';
+    case 'discord':
+      url = 'https://discordapp.com/users/635133043559890964';
+      break;
+    case 'github':
+      url = 'https://github.com/koruzer';
+      break;
+    case 'twitter':
+      url = 'https://twitter.com/ApiMatthew';
       break;
   }
 
@@ -18,7 +24,7 @@ function startIntroTyping() {
   new TypeIt('#intro-text', {
     speed: 50,
   })
-    .type('Welcome.', { delay: 1000 })
+    .type('welcome to koruze.tk.', { delay: 1200 })
     .delete(null, { delay: 1000 })
     .type(`${mobile ? 'tap' : 'press any key'} to enter.`)
     .go();
@@ -31,14 +37,14 @@ function startIntroTyping() {
 function typerStartTyping(typer) {
   typer.reset();
 
-  let text = ['...', '....', '.....', '......', '.......'];
+  let text = ['retard', 'not smart', 'html begginer', 'sped', 'im a monkey'];
 
   text.forEach(function (language, index) {
     typer.move(null);
     typer.type(language, { delay: 1000 });
     typer.pause(1000);
 
-    typer.delete(language.length, { delay: 1900 });
+    typer.delete(language.length, { delay: 1000 });
   });
 
   typer.go();
@@ -56,7 +62,7 @@ function startMainTyping() {
 }
 
 function switchScreen() {
-  document.title = 'HR';
+  document.title = 'Koruze | home';
 
   $('.intro').fadeOut(1000, function () {
     $('.bg-image').fadeIn(1000);
